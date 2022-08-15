@@ -2,37 +2,51 @@
 <html lang="zh-cn">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport"
+        content="viewport-fit=cover,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
     <title>2048</title>
-    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/index.min.css">
     <style></style>
 </head>
 
 <body>
     <div class="game">
-        <header>
-            <div class="score">
-                <span>分数：</span>
-                <span>0</span>
+
+        <div class="user_btns_box">
+
+            <div class="userInfo">
+
+                <div class="user"></div>
+
+                <div class="score">
+                    <p>分数:<span>0</span></p>
+                    <p>历史最高:<span>0</span></p>
+                </div>
+
+                <div class="ranking">排名</div>
+
             </div>
-            <div class="setting">设置</div>
-        </header>
+
+            <div class="fn_btns_box">
+                <div class="theme">主题</div>
+                <div class="withdraw">撤回</div>
+                <div class="setting">
+                    <img src="./images/setting.svg" alt="">
+                </div>
+            </div>
+
+        </div>
 
         <div class="squareBox">
 
         </div>
 
-        <footer>
-            <a href="mailto:jalen_chung@foxmail.com">联系作者</a>
-        </footer>
     </div>
+
 </body>
 
 <script src="./js/jquery-3.6.0.min.js"></script>
-<script src="./bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
 <script src="./js/index.js"></script>
 
 </html>

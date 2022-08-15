@@ -1,43 +1,205 @@
-$bg-light-color:#dae3eb;
+$bg-light-color: #dae3eb;
+$plan_a_color_w: #F0F8FF;
+$plan_a_color_o: #FFAE95;
+$plan_a_color_p: #DEB9ED;
+$plan_a_color_g: #AEEBB9;
+$plan_a_color_y: #FFF7B8;
+$font_size_s: .5rem;
+$font_size_l: .3rem;
+$btn_height_s: 1.5rem;
+$btn_height_l: 1rem;
 
-body{
+$overall_width: 10rem;
+
+body,
+html {
     margin: 0;
     padding: 0;
+}
+
+body {
     width: 100vw;
     height: 100vh;
+    background-color: $bg-light-color;
 }
 
-.game{
-    width: 100%;
+.game {
+    width: $overall_width * .96;
     height: 100%;
-    background-color: #a7dbcb;
-    box-sizing: border-box;
-    padding: 30px 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 
-    header{
-        width: 22.5rem;
-        height: fit-content;
-        margin: 0 auto;
-        background-color: $bg-light-color;
+    >div {
+        width: $overall_width * .96;
+        margin-top: .6rem;
     }
 
-    .squareBox{
-        width: 22.5rem;
-        height: 22.5rem;
-        background-color: $bg-light-color;
-        margin: 0 auto;
+    .user_btns_box {
+        font-size: $font_size_s;
+        height: 17.5%;
+
+        .userInfo {
+            width: 100%;
+            height: $btn_height_s * .8;
+            padding: $btn_height_s * .2 0;
+            background-color: aliceblue;
+            display: flex;
+            border-radius: .1rem;
+            cursor: pointer;
+
+            .user {
+                width: $btn_height_s * .8;
+                height: $btn_height_s * .8;
+                border-radius: $btn_height_s * .8;
+                margin-left: $btn_height_s * .2;
+                background-color: aqua;
+            }
+
+            .score {
+                p {
+                    margin: 0;
+                }
+
+                p:first-child {
+                    margin-left: $btn_height_s * .19;
+                }
+
+                p:last-child {
+                    margin-top: -$btn_height_s * .04;
+                    margin-left: -$btn_height_s * .15;
+                    transform: scale(0.56);
+                }
+            }
+
+            .ranking {
+                width: $btn_height_s;
+                height: $btn_height_s * .6;
+                margin-left: auto;
+                background-color: blanchedalmond;
+                text-align: center;
+                line-height: $btn_height_s * .6;
+                margin-top: $btn_height_s * .1;
+                letter-spacing: 3pt;
+                border-top-left-radius: $btn_height_s * .2;
+                border-bottom-left-radius: $btn_height_s * .2;
+                font-size: $font_size_l * .5;
+            }
+
+        }
+
+        .fn_btns_box {
+            width: 100%;
+            height: $btn_height_s;
+            margin-top: .2rem;
+            display: flex;
+
+            .theme,
+            .withdraw {
+                flex-grow: 1;
+                text-align: center;
+                line-height: $btn_height_s;
+                margin-right: .2rem;
+                background-color: aliceblue;
+                border-radius: .1rem;
+                letter-spacing: 5pt;
+                cursor: pointer;
+            }
+
+            .setting {
+                height: $btn_height_s;
+                width: $btn_height_s;
+                background-color: aliceblue;
+                border-radius: .1rem;
+                cursor: pointer;
+
+                img {
+                    margin: 20%;
+                    width: 60%;
+                }
+            }
+        }
+
+    }
+
+    .squareBox {
+        height: $overall_width * .96;
+        margin-bottom: 3rem;
+        background-color: #f0f8ff;
+        border-radius: .1rem;
+        cursor: pointer;
     }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width:768px) {
+    .game {
+        flex-direction: row-reverse;
+        justify-content: space-around;
 
-    .game{
-        width: 24.5rem;
-        margin: 0 auto;
-    }    
+        .user_btns_box {
+            width: 4rem;
+            height: 4rem;
+            font-size: $font_size_l;
+
+            .userInfo {
+                height: $btn_height_l * .8;
+                padding: $btn_height_l * .2 0;
+
+                .user {
+                    width: $btn_height_l * .8;
+                    height: $btn_height_l * .8;
+                    border-radius: $btn_height_l * .8;
+                    margin-left: $btn_height_l * .2;
+                }
+
+                .score {
+                    p:first-child {
+                        margin-left: $btn_height_l * .19;
+                    }
+
+                    p:last-child {
+                        margin-top: -$btn_height_l * .05;
+                        margin-left: -$btn_height_l * .15;
+                        transform: scale(0.5);
+                    }
+                }
+
+                .ranking {
+                    width: $btn_height_l;
+                    height: $btn_height_l * .6;
+                    line-height: $btn_height_l * .6;
+                    margin-top: $btn_height_l * .1;
+                    letter-spacing: 3pt;
+                    border-top-left-radius: $btn_height_l * .2;
+                    border-bottom-left-radius: $btn_height_l * .2;
+                    font-size: $font_size_s * .5;
+                }
+            }
+
+            .fn_btns_box {
+                height: $btn_height_l * .6;
+
+                .theme,
+                .withdraw {
+                    line-height: $btn_height_l * .6;
+                    margin-right: .2rem;
+                    border-radius: $btn_height_l * .1;
+                    letter-spacing: 5pt;
+                }
+
+                .setting {
+                    height: $btn_height_l * .6;
+                    width: $btn_height_l * .6;
+                    border-radius: $btn_height_l * .1;
+                }
+            }
+        }
+
+        .squareBox {
+            width: 4rem;
+            height: 4rem;
+        }
+
+    }
 }
-
-

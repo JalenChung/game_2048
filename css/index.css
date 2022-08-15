@@ -1,38 +1,175 @@
-body {
+body,
+html {
   margin: 0;
   padding: 0;
+}
+
+body {
   width: 100vw;
   height: 100vh;
+  background-color: #dae3eb;
 }
 
 .game {
-  width: 100%;
+  width: 9.6rem;
   height: 100%;
-  background-color: #a7dbcb;
-  box-sizing: border-box;
-  padding: 30px 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.game header {
-  width: 22.5rem;
-  height: fit-content;
-  margin: 0 auto;
-  background-color: #dae3eb;
+.game > div {
+  width: 9.6rem;
+  margin-top: .6rem;
+}
+
+.game .user_btns_box {
+  font-size: 0.5rem;
+  height: 17.5%;
+}
+
+.game .user_btns_box .userInfo {
+  width: 100%;
+  height: 1.2rem;
+  padding: 0.3rem 0;
+  background-color: aliceblue;
+  display: flex;
+  border-radius: .1rem;
+  cursor: pointer;
+}
+
+.game .user_btns_box .userInfo .user {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 1.2rem;
+  margin-left: 0.3rem;
+  background-color: aqua;
+}
+
+.game .user_btns_box .userInfo .score p {
+  margin: 0;
+}
+
+.game .user_btns_box .userInfo .score p:first-child {
+  margin-left: 0.285rem;
+}
+
+.game .user_btns_box .userInfo .score p:last-child {
+  margin-top: -0.06rem;
+  margin-left: -0.225rem;
+  transform: scale(0.56);
+}
+
+.game .user_btns_box .userInfo .ranking {
+  width: 1.5rem;
+  height: 0.9rem;
+  margin-left: auto;
+  background-color: blanchedalmond;
+  text-align: center;
+  line-height: 0.9rem;
+  margin-top: 0.15rem;
+  letter-spacing: 3pt;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  font-size: 0.15rem;
+}
+
+.game .user_btns_box .fn_btns_box {
+  width: 100%;
+  height: 1.5rem;
+  margin-top: .2rem;
+  display: flex;
+}
+
+.game .user_btns_box .fn_btns_box .theme,
+.game .user_btns_box .fn_btns_box .withdraw {
+  flex-grow: 1;
+  text-align: center;
+  line-height: 1.5rem;
+  margin-right: .2rem;
+  background-color: aliceblue;
+  border-radius: .1rem;
+  letter-spacing: 5pt;
+  cursor: pointer;
+}
+
+.game .user_btns_box .fn_btns_box .setting {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: aliceblue;
+  border-radius: .1rem;
+  cursor: pointer;
+}
+
+.game .user_btns_box .fn_btns_box .setting img {
+  margin: 20%;
+  width: 60%;
 }
 
 .game .squareBox {
-  width: 22.5rem;
-  height: 22.5rem;
-  background-color: #dae3eb;
-  margin: 0 auto;
+  height: 9.6rem;
+  margin-bottom: 3rem;
+  background-color: #f0f8ff;
+  border-radius: .1rem;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .game {
-    width: 24.5rem;
-    margin: 0 auto;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  .game .user_btns_box {
+    width: 4rem;
+    height: 4rem;
+    font-size: 0.3rem;
+  }
+  .game .user_btns_box .userInfo {
+    height: 0.8rem;
+    padding: 0.2rem 0;
+  }
+  .game .user_btns_box .userInfo .user {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.8rem;
+    margin-left: 0.2rem;
+  }
+  .game .user_btns_box .userInfo .score p:first-child {
+    margin-left: 0.19rem;
+  }
+  .game .user_btns_box .userInfo .score p:last-child {
+    margin-top: -0.05rem;
+    margin-left: -0.15rem;
+    transform: scale(0.5);
+  }
+  .game .user_btns_box .userInfo .ranking {
+    width: 1rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    margin-top: 0.1rem;
+    letter-spacing: 3pt;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+    font-size: 0.25rem;
+  }
+  .game .user_btns_box .fn_btns_box {
+    height: 0.6rem;
+  }
+  .game .user_btns_box .fn_btns_box .theme,
+  .game .user_btns_box .fn_btns_box .withdraw {
+    line-height: 0.6rem;
+    margin-right: .2rem;
+    border-radius: 0.1rem;
+    letter-spacing: 5pt;
+  }
+  .game .user_btns_box .fn_btns_box .setting {
+    height: 0.6rem;
+    width: 0.6rem;
+    border-radius: 0.1rem;
+  }
+  .game .squareBox {
+    width: 4rem;
+    height: 4rem;
   }
 }
